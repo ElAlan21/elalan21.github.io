@@ -1,52 +1,63 @@
-nav {
-    color: white;
-    position: fixed;
-    text-align: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+#nav-bar {
+  background-color: #14213d;
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  top: 0px;
+  box-shadow: 0 5px 5px rgb(0 0 0 /15%);
 }
 nav a {
-    color: white;
-    margin-right: 20px;
-    padding: 10px;
+  color: white;
+  margin-inline: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
 }
 nav a:hover {
-    background-color: darkgray;
-    transition: all 0.3s ease-in-out;
+  background-color: #0f192f;
+  color: #456ec6;
 }
-
+#nav-bar,
+#presentation {
+  justify-content: center;
+  align-items: center;
+}
 body {
-    margin-top: 80px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  display: grid;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-#title {
-    text-align: center;
-    padding: 5px;
-    width: 100%;
-    color: white;
-    background-color: black;
+main {
+  margin-inline: 20vw;
 }
-section {
-    border: 0.5px solid darkgrey;
-    margin-block: 20px;
-    margin-inline: 200px;
-    padding: 25px;
+#presentation {
+  color: white;
+  background-color: #14213d;
+  display: flex;
+  font-size: 22px;
+  height: 87vh;
+  padding-top: 9vh;
 }
-
+#header-logo {
+  align-self: start;
+  height: 60px;
+}
+#headshot {
+  width: 50%;
+  align-self: end;
+}
+main section {
+  border: 2px solid #00000033;
+  border-radius: 10px;
+  margin-block: 30px;
+  padding-inline: 20px;
+}
 footer {
-    text-align: center;
-    color: gray;
+  background-color: #14213d;
+  color: #e5e5e5;
+  padding-inline: 15vw;
+  padding-block: 5px;
 }
-#contacto ul {
-    list-style: none;
-}
-#contacto ul li {
-    margin: 2px;
-}
-.fa {
-    color: #9064ed;
+fieldset {
+    display: flex;
 }
