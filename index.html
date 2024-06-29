@@ -1,167 +1,25 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
-    <script src="script.js"></script>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Portfolio de Alan Valenzuela, estudiante de Ingeniería Informática." />
-    <title>Estudiante de Programación | Alan Valenzuela</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>Wordle</title>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   </head>
   <body>
-    <header>
-      <nav id="nav-bar">
-        <img title="Alan Developer" id="header-logo" src="images/logo_letra_A.png" alt="Logo de Alan Valenzuela" />
-        <span>
-          <a href="#acerca-de-mi">Acerca de mí</a>
-          <a href="#habilidades">Habilidades</a>
-          <a href="#experiencia">Experiencia</a>
-          <a href="#proyectos">Proyectos</a>
-          <a href="#contacto">Contacto</a>
-        </span>
-      </nav>
-      <section id="presentation">
-        <div>
-          <p>¡Hola! Me llamo</p>
-          <h1>ALAN VALENZUELA</h1>
-          <p>Estudiante de Ing. Informática</p>
-        </div>
-        <img id="headshot" src="images/perfil_portfolio.png" alt="Fotografía de Alan Valenzuela" />
-      </section>
-    </header>
     <main>
-      <section id="acerca-de-mi">
-        <header>
-          <h2>Acerca de mí</h2>
-        </header>
-        <p>
-          Como desarrollador web junior, fusiono mi pasión por el diseño y la programación para crear experiencias web
-          excepcionales. Estoy comprometido a seguir aprendiendo y mejorando continuamente mientras busco oportunidades
-          desafiantes que amplíen mi experiencia en el desarrollo web.
-        </p>
-      </section>
-      <section id="habilidades">
-        <header>
-          <h2>Habilidades</h2>
-        </header>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Javascript</li>
-          <li>Java</li>
-          <li>Git</li>
-        </ul>
-      </section>
-      <section id="experiencia">
-        <header>
-          <h2>Experiencia</h2>
-        </header>
-        <ul>
-          <li>
-            <p>
-              <strong>Empresa X</strong>
-              (2022-presente)
-            </p>
-            <ul>
-              <li>Desarrollador web junior</li>
-              <li>Community Manager de Elon Musk</li>
-            </ul>
-          </li>
-          <li>
-            <p>
-              <strong>Empresa Y</strong>
-              (2020-2022)
-            </p>
-            <ul>
-              <li>Responable del diseño y maquetación de la pagina web de la empresa</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <section id="proyectos">
-        <header>
-          <h2>Proyectos</h2>
-        </header>
-        <ul>
-          <li>
-            <article>
-              <a href="https://github.com/ElAlan21/parawhy-game" target="_blank">Juego Parawhy</a>
-              <p>
-                Minijuego en CLI desarrollado con Java en el cual puedes ir a varias ciudades del Paraguay y completar
-                misiones para avanzar en la historia.
-              </p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <a href="https://san-blas-app.web.app/" target="_blank">San Blas App</a>
-              <p>
-                Aplicación desarrollada con Dart y Flutter para dar anuncios a los alumnos y organizar exámenes y
-                proyectos de manera digital.
-              </p>
-            </article>
-          </li>
-        </ul>
-      </section>
-      <section id="contacto">
-        <h2>Contacto</h2>
-
-        <form method="post" action="/">
-          <fieldset>
-            <legend>Información personal</legend>
-            <label>
-              Nombre:
-              <input type="text" name="name" required />
-            </label>
-            <label>
-              Apellido:
-              <input type="text" name="surname" required />
-            </label>
-            <label>
-              Email:
-              <input type="email" name="surname" required />
-            </label>
-            <label>
-              Teléfono:
-              <input type="tel" name="surname" required pattern="[0-9]{9}" />
-            </label>
-          </fieldset>
-          <input type="submit" value="Enviar" />
-        </form>
-
-        <ul>
-          <li>
-            Email:
-            <b>alan07valenzuela@gmail.com</b>
-          </li>
-          <li>
-            Celular:
-            <b>+595 995-362-885</b>
-          </li>
-          <li>
-            <a href="https://x.com/JulianAssange_" target="_blank">
-              <b>Twitter</b>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/mark-zuckerberg-618bba58/" target="_blank">
-              <b>Linkedin</b>
-            </a>
-          </li>
-        </ul>
-      </section>
+      <h1 id="wordle-title">Wordle</h1>
+      <input type="text" name="word" id="word-input" maxlength="5" />
+      <button id="try-button">Intentar</button>
+      <div id="grid"></div>
     </main>
     <footer>
-      <small>
-        Logotipo extraído de:
-        <a href="https://www.vecteezy.com/free-png/letter-a-logo" target="_blank">Letter A Logo PNGs by Vecteezy</a>
-      </small>
-      <small>
-        Diseño de portfolio basado en:
-        <a href="https://chaseohlson.com/" target="_blank">Chase Olson's Portfolio</a>
-      </small>
+      <p>Intentos:</p>
+      <p id="guesses-counter"></p>
+      <p>de</p>
+      <p id="max-guesses"></p>
     </footer>
   </body>
 </html>
