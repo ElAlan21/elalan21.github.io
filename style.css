@@ -14,7 +14,22 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-button {
+#refresh-button {
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.3s ease;
+    padding: 5px;
+    border-radius: 60px;
+}
+#refresh-button span {
+    color: darkgray;
+    font-size: 40px;
+}
+#refresh-button:active {
+    background-color: gray;
+}
+main button {
     background-color: #4ea247;
     border-style: none;
     border-radius: 5px;
